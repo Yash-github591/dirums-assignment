@@ -29,7 +29,63 @@ function App() {
         </div>
       </nav>
       <div className="flex h-full h-5/6">
-        <div className="rightbar w-1/6 border-r-2 border-black "></div>
+        <div className="rightbar w-1/6 border-r-2 border-black relative px-12 py-8">
+          <h1 className="text-2xl font-bold relative">
+            Filters
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-black"></span>
+          </h1>
+          <h2 className="text-xl mt-8 font-black"> Price</h2>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            Below 10,000
+            <br />
+          </label>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            10,000-25,000
+            <br />
+          </label>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            25,000-50,000
+            <br />
+          </label>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            50,000-1,00,000
+            <br />
+          </label>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            Above 1,00,000
+            <br />
+          </label>
+          <h1 className="text-2xl font-bold relative mt-8">Sort By Date</h1>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            Newest
+            <br />
+          </label>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            Oldest
+            <br />
+          </label>
+          <h1 className="text-2xl font-bold relative mt-8">Sort By Date</h1>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            High to Low
+            <br />
+          </label>
+          <label className="text-sm">
+            <input type="radio" name="below" className="m-1" />
+            Low to High
+            <br />
+          </label>
+          <button className="my-10 border-2 rounded-xl border-black p-2">
+            Reset Filters
+          </button>
+        </div>
         <div className="leftbar w-5/6"></div>
       </div>
     </div>
