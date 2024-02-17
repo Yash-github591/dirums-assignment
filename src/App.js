@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Product from "./components/Product";
 
 function App() {
   return (
@@ -28,8 +29,8 @@ function App() {
           <h2 className="text-xl text-yellow-600">Artworks</h2>
         </div>
       </nav>
-      <div className="flex h-full h-5/6">
-        <div className="rightbar w-1/6 border-r-2 border-black relative px-12 py-8">
+      <div className="flex h-full">
+        <div className="rightbar h-full w-1/6 relative px-12 py-8">
           <h1 className="text-2xl font-bold relative">
             Filters
             <span className="absolute bottom-0 left-0 h-1 w-full bg-black"></span>
@@ -86,7 +87,32 @@ function App() {
             Reset Filters
           </button>
         </div>
-        <div className="leftbar w-5/6"></div>
+        <div className="leftbar border-l-2 border-black w-5/6 text-center">
+          <h1 className="text-4xl m-4 font-extrabold">
+            OUR EXQUISITE ART
+            <br />
+            COLLECTION
+          </h1>
+          <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
+          <h1 className="text-lg p-4 m-4 font-extrabold">
+            Acquire original art from our online art gallery. Take a look at our
+            vast collection of artwork created by
+            <br />
+            artists from across the world.
+          </h1>
+          <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
+          <div className="grid grid-cols-3 flex flex-wrap border-l-2 border-black p-6 items-center justify-items-center">
+            <Product ind={1} />
+            <Product ind={2} />
+            <Product ind={3} />
+            <Product ind={4} />
+            <Product ind={5} />
+            <Product ind={6} />
+            <Product ind={7} />
+            <Product ind={7} />
+            <Product ind={7} />
+          </div>
+        </div>
       </div>
     </div>
   );
