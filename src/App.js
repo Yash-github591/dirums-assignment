@@ -6,14 +6,17 @@ function App() {
   return (
     <div className="App font-mono h-screen w-screen">
       <nav>
-        <div className="first flex justify-center bg-black gap-10 h-12">
-          <img src="./logos/dirums.png" className="w-22 h-10"></img>
-          <input
-            type="text"
-            name="searchTerm"
-            className="bg-gray-300 w-1/2 h-5 my-4"
-          ></input>
-          <img src="./logos/wishlist.png" className="w-10 h-5 my-4"></img>
+        <div className="first flex bg-black h-12">
+          <img src="./logos/menu.png" className="lg:hidden  w-7 h-7 m-2"></img>
+          <div className="flex justify-center gap-10 w-full">
+            <img src="./logos/dirums.png" className="w-22 h-10"></img>
+            <input
+              type="text"
+              name="searchTerm"
+              className="bg-gray-300 w-1/2 h-5 my-4"
+            ></input>
+            <img src="./logos/wishlist.png" className="w-10 h-5 my-4"></img>
+          </div>
         </div>
         <div className="second hidden lg:flex justify-center gap-10 h-8 bg-yellow-600  py-1 text-white">
           <h2 className="flex-shrink-0">Artwork for Wall</h2>
