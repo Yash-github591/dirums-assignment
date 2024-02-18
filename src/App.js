@@ -15,13 +15,13 @@ function App() {
           ></input>
           <img src="./logos/wishlist.png" className="w-10 h-5 my-4"></img>
         </div>
-        <div className="second flex justify-center gap-10 h-8 bg-yellow-600  py-1 text-white">
-          <h2>Artwork for Wall</h2>
-          <h2>Folk Art & Craft</h2>
-          <h2>Wildlife Paintings</h2>
-          <h2>Home & Living</h2>
-          <h2>Painting for Living Room</h2>
-          <h2>Religious Paintings</h2>
+        <div className="second hidden lg:flex justify-center gap-10 h-8 bg-yellow-600  py-1 text-white">
+          <h2 className="flex-shrink-0">Artwork for Wall</h2>
+          <h2 className="flex-shrink-0">Folk Art & Craft</h2>
+          <h2 className="flex-shrink-0">Wildlife Paintings</h2>
+          <h2 className="flex-shrink-0">Home & Living</h2>
+          <h2 className="flex-shrink-0">Painting for Living Room</h2>
+          <h2 className="flex-shrink-0">Religious Paintings</h2>
         </div>
         <div className="h-10 flex gap-2 bg-gray-300 px-10 py-2">
           <h2 className="text-xl">Home</h2>
@@ -30,7 +30,7 @@ function App() {
         </div>
       </nav>
       <div className="flex h-full">
-        <div className="rightbar h-full w-1/6 relative px-12 py-8">
+        <div className="rightbar hidden lg:block h-full w-1/6 relative px-12 py-8">
           <h1 className="text-2xl font-bold relative">
             Filters
             <span className="absolute bottom-0 left-0 h-1 w-full bg-black"></span>
@@ -87,21 +87,21 @@ function App() {
             Reset Filters
           </button>
         </div>
-        <div className="leftbar border-l-2 border-black w-5/6 text-center">
-          <h1 className="text-4xl m-4 font-extrabold">
+        <div className="leftbar border-l-2 border-black w-screen lg:w-5/6">
+          <h1 className="text-4xl m-4 font-extrabold text-center">
             OUR EXQUISITE ART
             <br />
             COLLECTION
           </h1>
-          <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
-          <h1 className="text-lg p-4 m-4 font-extrabold">
+          <div className=" h-1 w-auto mx-2 bg-yellow-600"></div>
+          <h1 className="text-lg text-center p-4 m-4 font-extrabold">
             Acquire original art from our online art gallery. Take a look at our
             vast collection of artwork created by
-            <br />
+            {/* <br /> */}
             artists from across the world.
           </h1>
           <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
-          <div className="grid grid-cols-3 flex flex-wrap border-l-2 border-black p-6 items-center justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex flex-wrap border-l-2 border-black p-3 items-center justify-items-center">
             <Product ind={1} />
             <Product ind={2} />
             <Product ind={3} />
