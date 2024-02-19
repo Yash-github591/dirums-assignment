@@ -1,10 +1,35 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Product from "./components/Product";
+import { useState } from "react";
 
 function App() {
+  const [double, setDouble] = useState(1);
+  const [single, setSingle] = useState(0);
+  const [cols, setCols] = useState(2);
+
+  const handleDouble = () => {
+    const element = document.querySelector(".productTable");
+    if (double === 1) {
+      element.classList.remove("grid-cols-2");
+      element.classList.add("grid-cols-1");
+      setDouble(1 - double);
+      setSingle(1 - single);
+    }
+  };
+  const handleSingle = () => {
+    const element = document.querySelector(".productTable");
+    // element.classList.remove("grid-cols-3");
+    if (single === 1) {
+      element.classList.remove("grid-cols-1");
+      element.classList.add("grid-cols-2");
+      setDouble(1 - double);
+      setSingle(1 - single);
+    }
+  };
+
   return (
-    <div className="App font-mono h-screen w-screen">
+    <div className="App font-mono h-screen w-full">
       <nav>
         <div className="first flex bg-black h-12">
           <img src="./logos/menu.png" className="lg:hidden  w-7 h-7 m-2"></img>
@@ -18,25 +43,25 @@ function App() {
             <img src="./logos/wishlist.png" className="w-10 h-5 my-4"></img>
           </div>
         </div>
-        <div className="second hidden lg:flex justify-center gap-10 h-8 bg-yellow-600  py-1 text-white">
-          <h2 className="flex-shrink-0">Artwork for Wall</h2>
-          <h2 className="flex-shrink-0">Folk Art & Craft</h2>
-          <h2 className="flex-shrink-0">Wildlife Paintings</h2>
-          <h2 className="flex-shrink-0">Home & Living</h2>
-          <h2 className="flex-shrink-0">Painting for Living Room</h2>
-          <h2 className="flex-shrink-0">Religious Paintings</h2>
+        <div className="second hidden lg:flex justify-center gap-10 h-auto w-full bg-yellow-600  py-1 text-white">
+          <h2>Artwork for Wall</h2>
+          <h2>Folk Art & Craft</h2>
+          <h2>Wildlife Paintings</h2>
+          <h2>Home & Living</h2>
+          <h2>Painting for Living Room</h2>
+          <h2>Religious Paintings</h2>
         </div>
-        <div className="h-10 flex gap-2 bg-gray-300 px-10 py-2">
+        <div className="third h-10 flex gap-2 bg-gray-300 px-10 py-2">
           <h2 className="text-xl">Home</h2>
           <h1 className="text-xl">{">"}</h1>
           <h2 className="text-xl text-yellow-600">Artworks</h2>
         </div>
       </nav>
       <div className="flex h-full">
-        <div className="rightbar hidden lg:block h-full w-1/6 relative px-12 py-8">
+        <div className="leftbar hidden lg:block h-full w-1/6 relative px-12 py-8">
           <h1 className="text-2xl font-bold relative">
             Filters
-            <span className="absolute bottom-0 left-0 h-1 w-full bg-black"></span>
+            <span className="absolute bottom-0 left-0 h-1 w-auto bg-black"></span>
           </h1>
           <h2 className="text-xl mt-8 font-black"> Price</h2>
           <label className="text-sm">
@@ -90,7 +115,7 @@ function App() {
             Reset Filters
           </button>
         </div>
-        <div className="leftbar border-l-2 border-black w-screen lg:w-5/6">
+        <div className="rightbar border-l-2 border-black w-auto lg:w-5/6">
           <h1 className="text-4xl m-4 font-extrabold text-center">
             OUR EXQUISITE ART
             <br />
@@ -99,12 +124,22 @@ function App() {
           <div className=" h-1 w-auto mx-2 bg-yellow-600"></div>
           <h1 className="text-lg text-center p-4 m-4 font-extrabold">
             Acquire original art from our online art gallery. Take a look at our
-            vast collection of artwork created by
-            {/* <br /> */}
-            artists from across the world.
+            vast collection of artwork created by artists from across the world.
           </h1>
           <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex flex-wrap border-l-2 border-black p-3 items-center justify-items-center">
+          <div className="lg:hidden flex buttons justify-end pt-2">
+            <img
+              src={`./buttons/double-${double}.png`}
+              className="DoubleCol h-4 mx-2"
+              onClick={handleDouble}
+            ></img>
+            <img
+              src={`./buttons/single-${single}.png`}
+              className="SingleCol h-4 mr-8"
+              onClick={handleSingle}
+            ></img>
+          </div>
+          <div className="productTable grid grid-cols-2 lg:grid-cols-3 flex flex-wrap border-l-2 border-black p-3 items-center justify-items-center">
             <Product ind={1} />
             <Product ind={2} />
             <Product ind={3} />
