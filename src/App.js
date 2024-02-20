@@ -121,29 +121,32 @@ function App() {
             Reset Filters
           </button>
         </div>
-        <div className="rightbar border-l-2 border-black w-auto lg:w-5/6">
-          <h1 className="text-4xl m-4 font-extrabold text-center">
-            OUR EXQUISITE ART
-            <br />
-            COLLECTION
-          </h1>
-          <div className=" h-1 w-auto mx-2 bg-yellow-600"></div>
-          <h1 className="text-lg text-center p-4 m-4 font-extrabold">
-            Acquire original art from our online art gallery. Take a look at our
-            vast collection of artwork created by artists from across the world.
-          </h1>
-          <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
-          <div className="lg:hidden flex buttons justify-end pt-2">
-            <img
-              src={`./buttons/double-${double}.png`}
-              className="DoubleCol h-4 mx-2"
-              onClick={handleDouble}
-            ></img>
-            <img
-              src={`./buttons/single-${single}.png`}
-              className="SingleCol h-4 mr-8"
-              onClick={handleSingle}
-            ></img>
+        <div className="rightbar w-auto lg:w-5/6">
+          <div className="border-l-2 border-black">
+            <h1 className="text-4xl m-4 mt-0 pt-4 font-extrabold text-center">
+              OUR EXQUISITE ART
+              <br />
+              COLLECTION
+            </h1>
+            <div className=" h-1 w-auto mx-2 bg-yellow-600"></div>
+            <h1 className="text-lg text-center p-4 m-4 font-extrabold">
+              Acquire original art from our online art gallery. Take a look at
+              our vast collection of artwork created by artists from across the
+              world.
+            </h1>
+            <div className=" h-1 w-30 mx-2 bg-yellow-600"></div>
+            <div className="lg:hidden flex buttons justify-end pt-2">
+              <img
+                src={`./buttons/double-${double}.png`}
+                className="DoubleCol h-4 mx-2"
+                onClick={handleDouble}
+              ></img>
+              <img
+                src={`./buttons/single-${single}.png`}
+                className="SingleCol h-4 mr-8"
+                onClick={handleSingle}
+              ></img>
+            </div>
           </div>
           <div className="productTable grid grid-cols-2 lg:grid-cols-3 flex flex-wrap border-l-2 border-black p-3 items-center justify-items-center">
             {data &&
