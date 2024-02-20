@@ -1,12 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Product from "./components/Product";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [double, setDouble] = useState(1);
   const [single, setSingle] = useState(0);
   const [cols, setCols] = useState(2);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((dataFromUrl) => setData(dataFromUrl));
+  }, []);
 
   const handleDouble = () => {
     const element = document.querySelector(".productTable");
@@ -19,7 +26,6 @@ function App() {
   };
   const handleSingle = () => {
     const element = document.querySelector(".productTable");
-    // element.classList.remove("grid-cols-3");
     if (single === 1) {
       element.classList.remove("grid-cols-1");
       element.classList.add("grid-cols-2");
@@ -140,15 +146,16 @@ function App() {
             ></img>
           </div>
           <div className="productTable grid grid-cols-2 lg:grid-cols-3 flex flex-wrap border-l-2 border-black p-3 items-center justify-items-center">
-            <Product ind={1} />
-            <Product ind={2} />
-            <Product ind={3} />
-            <Product ind={4} />
-            <Product ind={5} />
-            <Product ind={6} />
-            <Product ind={7} />
-            <Product ind={7} />
-            <Product ind={7} />
+            {data &&
+              data.products.map((currProduct) => (
+                <Product
+                  description={currProduct.description}
+                  title={currProduct.title}
+                  price={currProduct.price}
+                  src={currProduct.images[0]}
+                  key={currProduct.id}
+                />
+              ))}
           </div>
         </div>
       </div>
