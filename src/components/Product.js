@@ -13,13 +13,9 @@ function Product({ src, title, price, description }) {
   }, []);
 
   return (
-    <div className="group relative m-4">
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <img
-          src={src}
-          alt={title}
-          className="object-cover object-center max-w-full h-auto lg:h-full lg:w-full"
-        />
+    <div className="group relative">
+      <div className="aspect-h-1 p-2 aspect-w-1 w-full overflow-hidden flex items-center rounded-md  lg:aspect-none group-hover:opacity-75 h-80 w-1/2">
+        <img src={src} alt={title} className="object-center h-full" />
       </div>
       <div className="mt-4 ">
         <div>
