@@ -17,7 +17,7 @@ function App() {
         </div>
         <div className="second flex justify-center gap-10 h-auto w-full bg-yellow-600">
           <div className="group">
-            <h2 className="text-white group-hover:text-yellow-600 hover:bg-gray-300 p-2">
+            <h2 className="text-white group-hover:text-yellow-600 group-hover:bg-gray-300 p-2">
               Artworks
             </h2>
             <div className="opacity-0 scale-0 group-hover:opacity-100 shadow-lg mb-2 group-hover:scale-100 w-1/2 grid grid-cols-3 gap-2 p-4 bg-gray-100 text-black absolute">
@@ -57,7 +57,7 @@ function App() {
             </div>
           </div>
           <div className="group">
-            <h2 className="text-white  hover:text-yellow-600 hover:bg-gray-300 p-2">
+            <h2 className="text-white group-hover:text-yellow-600 group-hover:bg-gray-300 p-2">
               Home & Living
             </h2>
             <div className="opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 w-full h-1/2 shadow-lg mb-2 left-0 grid grid-cols-6 flex justify-around gap-2 p-8 bg-gray-100 text-black absolute">
