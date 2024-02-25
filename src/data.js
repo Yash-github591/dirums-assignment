@@ -390,6 +390,195 @@ const data = [
     heading: "Teracotta Pots",
     parentId: 76, // Decorative Pot & Planters
   },
+
+  {
+    id: 79,
+    heading: "Jewellery & Accessories",
+    parentId: null,
+  },
+  {
+    id: 80,
+    heading: "Earrings",
+    parentId: 79, // Jewellery & Accessories
+  },
+  {
+    id: 81,
+    heading: "Resin",
+    parentId: 80, // Earrings
+  },
+  {
+    id: 82,
+    heading: "Quilling",
+    parentId: 80, // Earrings
+  },
+  {
+    id: 83,
+    heading: "Bead & Mirror",
+    parentId: 80, // Earrings
+  },
+  {
+    id: 84,
+    heading: "Clay",
+    parentId: 80, // Earrings
+  },
+  {
+    id: 85,
+    heading: "Fabric",
+    parentId: 80, // Earrings
+  },
+
+  {
+    id: 86,
+    heading: "Jwellery Sets",
+    parentId: 79, // Jewellery & Accessories
+  },
+  {
+    id: 87,
+    heading: "Resin Jwellery",
+    parentId: 86, // Jwellery Sets
+  },
+  {
+    id: 88,
+    heading: "Quilling Jwellery",
+    parentId: 86, // Jwellery Sets
+  },
+  {
+    id: 89,
+    heading: "Sea-Shell Jwellery",
+    parentId: 86, // Jwellery Sets
+  },
+  {
+    id: 90,
+    heading: "Fabric Jwellery",
+    parentId: 86, // Jwellery Sets
+  },
+  {
+    id: 91,
+    heading: "Wood Jwellery",
+    parentId: 86, // Jwellery Sets
+  },
+  {
+    id: 92,
+    heading: "Kundan Jwellery",
+    parentId: 86, // Jwellery Sets
+  },
+
+  {
+    id: 93,
+    heading: "Kitchen & Dining",
+    parentId: null,
+  },
+  {
+    id: 94,
+    heading: "Drinkware",
+    parentId: 93, // Kitchen & Dining
+  },
+  {
+    id: 95,
+    heading: "Water Bottles",
+    parentId: 94, // Drinkware
+  },
+  {
+    id: 96,
+    heading: "TeaCups Set",
+    parentId: 94, // Drinkware
+  },
+  {
+    id: 97,
+    heading: "Glass Set",
+    parentId: 94, // Drinkware
+  },
+  {
+    id: 98,
+    heading: "Fabric",
+    parentId: 94, // Drinkware
+  },
+  {
+    id: 99,
+    heading: "Coffee Mugs",
+    parentId: 94, // Drinkware
+  },
+
+  {
+    id: 100,
+    heading: "SearveWare",
+    parentId: 93, // Kitchen & Dining
+  },
+  {
+    id: 101,
+    heading: "Seving Trays",
+    parentId: 100, // SearveWare
+  },
+  {
+    id: 102,
+    heading: "Tray Set",
+    parentId: 100, // SearveWare
+  },
+  {
+    id: 103,
+    heading: "Tableware",
+    parentId: 93, // Kitchen & Dining
+  },
+  {
+    id: 104,
+    heading: "Coasters",
+    parentId: 103, // Tableware
+  },
+  {
+    id: 105,
+    heading: "Kettle",
+    parentId: 103, // Tableware
+  },
+  {
+    id: 106,
+    heading: "Gifting",
+    parentId: null,
+  },
+  {
+    id: 107,
+    heading: "Corporate Gifts",
+    parentId: 106, // Gifting
+  },
+  {
+    id: 108,
+    heading: "Anniversary Gifts",
+    parentId: 106, // Gifting
+  },
+  {
+    id: 109,
+    heading: "Birthday Gifts",
+    parentId: 106, // Gifting
+  },
+  {
+    id: 110,
+    heading: "Gift Hampers",
+    parentId: 106, // Gifting
+  },
+  {
+    id: 111,
+    heading: "Personalized Gifts",
+    parentId: 106, // Gifting
+  },
+  {
+    id: 112,
+    heading: "Valentines Day Special",
+    parentId: 106, // Gifting
+  },
+  {
+    id: 113,
+    heading: "Arts & Collectibles",
+    parentId: null,
+  },
+  {
+    id: 114,
+    heading: "Sculptures",
+    parentId: 113, // Arts & Collectibles
+  },
+  {
+    id: 115,
+    heading: "Masterpieces",
+    parentId: 113, // Arts & Collectibles
+  },
 ];
 
 export default data;
