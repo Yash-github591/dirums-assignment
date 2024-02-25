@@ -29,7 +29,7 @@ function App() {
             <img src="./images/wishlist.png" className="w-15 h-5 my-4"></img>
           </div>
         </div>
-        <div className="second flex justify-center gap-8 h-auto w-full bg-yellow-600">
+        <div className="second flex justify-center gap-10 h-auto w-full bg-yellow-600">
           {headings.map((item) => {
             return <Menu key={item.id} item={item} />;
           })}

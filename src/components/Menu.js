@@ -3,7 +3,6 @@ import data from "../data";
 
 function Menu({ item }) {
   const [cols, setCols] = useState(3);
-  const [width, setWidth] = useState("w-1/2");
   const [columnHeadings, setcolumnHeadings] = useState([]);
   const [left, setLeft] = useState("");
 
@@ -14,7 +13,6 @@ function Menu({ item }) {
     if (filteredData.length > 3) {
       setCols(6);
       setLeft("left-0");
-      setWidth("w-auto");
     } else {
       setCols(filteredData.length);
     }
@@ -27,7 +25,7 @@ function Menu({ item }) {
           {item.heading}
         </h2>
         <div
-          className={`${left} gridbox opacity-0 scale-0 group-hover:opacity-100 shadow-lg mb-2 group-hover:scale-100 ${width} grid grid-cols-${cols} gap-2 p-4 bg-gray-100 text-black absolute`}
+          className={`${left} gridbox opacity-0 scale-0 group-hover:opacity-100 shadow-lg mb-2 group-hover:scale-100 grid grid-cols-${cols} gap-2 p-4 bg-gray-100 text-black absolute`}
         >
           {columnHeadings.map((d) => {
             return (
