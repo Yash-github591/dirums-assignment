@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import "./App.css";
+import data from "./data.js";
 
 function App() {
+  useEffect(() => {
+    // const obj = getData();
+    console.log(data);
+  }, []);
+
   return (
     <div className="App font-mono h-screen w-full">
       <nav>
