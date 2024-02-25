@@ -3,7 +3,7 @@ const data = [
   {
     id: 1,
     heading: "ArtWorks",
-    parent: null,
+    parentId: null,
   },
   {
     id: 2,
@@ -13,42 +13,42 @@ const data = [
   {
     id: 3,
     heading: "Acrylic",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 4,
     heading: "WaterColor",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 5,
     heading: "Oil Paintings",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 6,
     heading: "Mix Media Paintings",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 7,
     heading: "Ink On Paper Paintings",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 8,
     heading: "Wildlife Paintings",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 9,
     heading: "Natural Landscape",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 10,
     heading: "Home Office Art",
-    parentId: 7, // Paintings
+    parentId: 2, // Paintings
   },
   {
     id: 11,
