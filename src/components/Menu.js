@@ -29,9 +29,8 @@ function Menu({ item }) {
   if (len > 3) {
     colsClass = "grid-cols-6";
     left = "left-0";
-  } else {
-    colsClass = `grid-cols-${len}`;
-    console.log("colsClass=", colsClass, typeof colsClass);
+  } else if (len == 2) {
+    colsClass = "grid-cols-2";
   }
 
   console.log(item.heading, columnHeadings);
